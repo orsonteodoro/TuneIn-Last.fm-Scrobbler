@@ -560,7 +560,6 @@ function lastfm(loveBtnParent, lastfmBtnParent, SAAHandler) {
 				lPElapsed = pelapsedInSec; 
 				}
 			else if ((totaltsec === false || totaltsec > 30) && ndat[0] != odat[0] && typeof ndat[0] != "undefined" && nPlaying != ndat[0] && pelapsedInSec > 0) {
-				alert("scrobbling3");
 				var scrobbledat = "track=" + encodeURIComponent(ndat[0]) + "&artist=" + encodeURIComponent(ndat[1]) + "&api_key=" + API_KEY + "&sk=" + sKey;
 				if (totaltsec !== false) {
 					scrobbledat += "&duration=" + totaltsec; }
@@ -1023,7 +1022,7 @@ TuneIn.prototype.createParent = function() {
 			customParent.replaceChild(buttonPar, oldChild); } }
 	*/
 
-			var nonCustomParent = document.getElementsByClassName("now-playing")[0];
+			var nonCustomParent = document.getElementsByClassName("line2 _navigateNowPlaying")[0];
 			var buttonPar = document.createElement("h2");
 			buttonPar.style.marginBottom = "0px";
 			nonCustomParent.appendChild(buttonPar); 
